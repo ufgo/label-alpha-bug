@@ -1,0 +1,15 @@
+local window=require("scripts.window")
+
+function init(self)
+	print("Version: 44")
+	window.center()
+	window.resize()
+	
+	msg.post("@render:", "use_fixed_fit_projection", { near = -1, far = 1 })
+	msg.post("@render:/", "clear_color", { color = vmath.vector4(0.10, 0.15, 0.18,1.0) })
+	--0.1, 0.12, 0.21
+	msg.post("#", "init_monarch")
+
+	
+end
+
